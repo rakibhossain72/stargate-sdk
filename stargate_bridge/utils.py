@@ -24,3 +24,34 @@ class ChainIds:
     OPTIMISM = 10
     BASE = 8453
     AVALANCHE = 43114
+
+
+
+def format_token_amount(amount: str, decimals: int) -> str:
+    """
+    Format token amount with proper decimals.
+    
+    Args:
+        amount: Amount in human readable format (e.g., "1.5")
+        decimals: Token decimals (e.g., 6 for USDC)
+        
+    Returns:
+        Amount in smallest unit (e.g., "1500000" for 1.5 USDC)
+    """
+    from decimal import Decimal
+    return str(int(Decimal(amount) * (10 ** decimals)))
+
+
+def parse_token_amount(amount: str, decimals: int) -> str:
+    """
+    Parse token amount from smallest unit to human readable format.
+    
+    Args:
+        amount: Amount in smallest unit (e.g., "1500000")
+        decimals: Token decimals (e.g., 6 for USDC)
+        
+    Returns:
+        Amount in human readable format (e.g., "1.5")
+    """
+    from decimal import Decimal
+    return str(Decimal(amount) / (10 ** decimals))
