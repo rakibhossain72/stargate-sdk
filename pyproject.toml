@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stargate-bridge-sdk"
+version = "0.1.0"
+description = "Python SDK for Stargate Finance cross-chain bridge"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "rakib hossain", email = "rakib4ggp@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "web3==7.12.1",
+    "httpx==0.28.1",
+    "eth-account==0.13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/rakibhossain72/stargate-bridge-sdk"
+Repository = "https://github.com/rakibhossain72/stargate-bridge-sdk"
+Documentation = "https://github.com/rakibhossain72/stargate-bridge-sdk#readme"
+Issues = "https://github.com/rakibhossain72/stargate-bridge-sdk/issues"
