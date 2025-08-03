@@ -1,8 +1,9 @@
 import pytest
 from unittest.mock import Mock, AsyncMock, patch, MagicMock
 import httpx
-from stargate_bridge import StargateClient, QuoteParams, Tokens
+from stargate_bridge import StargateClient, Tokens
 from stargate_bridge.exceptions import StargateAPIError, StargateTransactionError
+from stargate_bridge.types import TransactionData
 
 
 class TestStargateClient:
