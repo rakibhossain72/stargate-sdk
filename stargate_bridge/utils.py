@@ -16,3 +16,11 @@ class Tokens:
         'USDT': '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9'
     }
 
+class ChainIds:
+    """Chain IDs for different networks."""
+    ETHEREUM = 1
+    POLYGON = 137
+    ARBITRUM = 42161
+    OPTIMISM = 10
+    BASE = 8453
+    AVALANCHE = 43114
